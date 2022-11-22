@@ -1,23 +1,34 @@
 import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css'
+import NavbarComponent from './Components/navbar';
+import { Container } from 'react-bootstrap';
+import Cancel from './Pages/cancel';
+import Success from './Pages/success';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Store from './Pages/store';
+
 
 function App() {
   return (
+
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Container>
+      {/* We'll keep the navbar at the top becuase, it's always there on every page, no matter what. */}
+
+      <NavbarComponent></NavbarComponent>
+
+      <BrowserRouter>
+        <Routes>
+          <Route index element = {<Store/>} />
+          <Route path = "success" element = {<Success/>} />
+          <Route path = "cancel" element = {<Cancel/>} />
+
+        </Routes>
+      
+      </BrowserRouter>
+
+      </  Container>
     </div>
   );
 }
