@@ -3,7 +3,6 @@ import { Nav } from "react-bootstrap";
 import React from "react";
 import { useState } from "react";
 
-
 function NavbarComponent(){
 
     // use state hooks
