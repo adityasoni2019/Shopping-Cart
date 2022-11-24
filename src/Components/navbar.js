@@ -5,6 +5,8 @@ import { useState, useContext } from "react";
 import { CartContext } from "../cartContext";
 import CartProduct from "./CartProduct";
 
+// understood ^ 
+
 function NavbarComponent(){
 
     const cart = useContext(CartContext);
@@ -32,7 +34,6 @@ function NavbarComponent(){
 
             <Modal show = {show} onHide = {handleClose}>
                 <Modal.Header closeButton>
-                    
                     <Modal.Title>Shopping Cart</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
@@ -54,7 +55,6 @@ function NavbarComponent(){
                         :
                         <h1>There are no items in the cart.</h1>
                     }
-                    {/* <h1>This is the modal body</h1> */}
                 </Modal.Body>
             </Modal>    
             

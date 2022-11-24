@@ -4,4 +4,4 @@ function Cancel(){
     )
 }
 
-export default Cancel; 
+export default Cancel;
